@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Imrankhan Jiragal - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .section-title {
+            border-left: 4px solid #3b82f6;
+            padding-left: 1rem;
+            margin-bottom: 2rem;
+        }
+        .skill-badge {
+            transition: all 0.3s ease;
+        }
+        .skill-badge:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand text-blue-600 font-bold" href="#">Dr. Imrankhan Jiragal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Personal Info Section -->
+    <section class="container py-5 mt-5">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h1 class="text-4xl font-bold mb-3">Dr. Imrankhan Jiragal</h1>
+                <p class="text-gray-600 mb-2">
+                    <i class="fas fa-map-marker-alt mr-2"></i>Bangalore, India
+                </p>
+                <p class="text-gray-600 mb-2">
+                    <i class="fas fa-envelope mr-2"></i>imrankhanjiragal@gmail.com
+                </p>
+                <div class="mt-4">
+                    <a href="#contact" class="btn btn-primary me-2">Contact</a>
+                    <a href="#" class="btn btn-outline-primary">Download CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Summary Section -->
+    <section id="about" class="bg-white py-5">
+        <div class="container">
+            <h2 class="section-title text-2xl font-bold">Summary</h2>
+            <p class="text-gray-700 leading-relaxed">
+                Dedicated and accomplished social science researcher with extensive experience in qualitative and quantitative analysis...
+            </p>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-2xl font-bold">Experience</h2>
+            <div class="accordion" id="experienceAccordion">
+                <!-- Experience items will be dynamically added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="bg-white py-5">
+        <div class="container">
+            <h2 class="section-title text-2xl font-bold">Skills</h2>
+            <div class="row" id="skillsContainer">
+                <!-- Skills will be dynamically added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-2xl font-bold">Research Publications</h2>
+            <div class="list-group">
+                <!-- Publication items will be dynamically added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 p-3 bg-blue-600 text-white rounded-full shadow-lg hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Dynamic content loading
+        const experiences = [
+            {
+                title: "Research Associate",
+                company: "ICAR-NIVEDI, Bangalore",
+                duration: "Current",
+                description: "Working on IndoZooRisk project using One Health Approaches..."
+            },
+            // Add other experiences
+        ];
+
+        const skills = ["QGIS", "IBM-SPSS", "NVIVO", "Power BI", "Epi-Info", "Dedoose"];
+        
+        const publications = [
+            "Adoption Level of Bi-voltine Silkworm...",
+            // Add other publications
+        ];
+
+        // Populate experiences
+        const accordion = document.getElementById('experienceAccordion');
+        experiences.forEach((exp, index) => {
+            accordion.innerHTML += `
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button ${index === 0 ? '' : 'collapsed'}" type="button" data-bs-toggle="collapse" data-bs-target="#exp${index}">
+                            ${exp.title} - ${exp.company}
+                        </button>
+                    </h2>
+                    <div id="exp${index}" class="accordion-collapse collapse ${index === 0 ? 'show' : ''}" data-bs-parent="#experienceAccordion">
+                        <div class="accordion-body">
+                            <p>${exp.description}</p>
+                            <small class="text-muted">${exp.duration}</small>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // Populate skills
+        const skillsContainer = document.getElementById('skillsContainer');
+        skills.forEach(skill => {
+            skillsContainer.innerHTML += `
+                <div class="col-md-4 mb-3">
+                    <div class="skill-badge bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-center">
+                        <i class="fas fa-check-circle mr-2"></i>${skill}
+                    </div>
+                </div>
+            `;
+        });
+
+        // Populate publications
+        const pubList = document.querySelector('.list-group');
+        publications.forEach(pub => {
+            pubList.innerHTML += `
+                <a href="#" class="list-group-item list-group-item-action">
+                    <i class="fas fa-file-alt mr-2 text-blue-600"></i>${pub}
+                </a>
+            `;
+        });
+
+        // Back to top button
+        window.addEventListener('scroll', () => {
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 300) {
+                backToTop.classList.remove('hidden');
+            } else {
+                backToTop.classList.add('hidden');
+            }
+        });
+
+        document.getElementById('backToTop').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
