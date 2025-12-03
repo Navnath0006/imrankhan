@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience | Dr. Imrankhan Jiragal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb', // Blue 600
+                        secondary: '#475569', // Slate 600
+                        dark: '#0f172a', // Slate 900
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-dark dark:text-gray-200 transition-colors duration-300 flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-primary dark:text-blue-400">Dr. Imrankhan</a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 font-medium transition-colors">Home</a>
+                    <a href="about.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 font-medium transition-colors">About</a>
+                    <a href="experience.html" class="text-primary dark:text-blue-400 font-bold transition-colors">Experience</a>
+                    <a href="publications.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 font-medium transition-colors">Publications</a>
+                    <a href="contact.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 font-medium transition-colors">Contact</a>
+
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors focus:outline-none">
+                        <i id="theme-icon" class="fas fa-moon text-gray-700 dark:text-yellow-300 text-lg"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="p-2 rounded-md text-gray-700 dark:text-gray-200 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-800 border-t dark:border-gray-700">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Home</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">About</a>
+                <a href="experience.html" class="block px-3 py-2 rounded-md text-base font-medium text-primary dark:text-blue-400 bg-blue-50 dark:bg-slate-700">Experience</a>
+                <a href="publications.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Publications</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-8 border-l-4 border-primary pl-4">Professional Journey</h1>
+
+            <!-- Timeline/Experience List -->
+            <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
+
+                <!-- Job 1 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 group-[.is-active]:bg-emerald-500 text-slate-500 group-[.is-active]:text-emerald-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                       <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <div class="flex flex-col sm:flex-row justify-between mb-1">
+                            <h3 class="font-bold text-gray-900 dark:text-white text-lg">MELD Coordinator</h3>
+                            <time class="font-caveat font-medium text-indigo-500 dark:text-indigo-400">Jan 2025 – Present</time>
+                        </div>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">Watershed Development Department, Govt. of Karnataka</p>
+                        <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                            Monitoring, Evaluation, Learning, and Documentation (MELD) Coordinator under the KMERC- CEPMIZ, WDC- PMKSY 2.0 and PMKSY-Other Intervention (OI) scheme.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 text-slate-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                       <i class="fas fa-flask"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <div class="flex flex-col sm:flex-row justify-between mb-1">
+                            <h3 class="font-bold text-gray-900 dark:text-white text-lg">Research Associate</h3>
+                            <time class="font-caveat font-medium text-indigo-500 dark:text-indigo-400">Aug 2023 – Jan 2025</time>
+                        </div>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">ICAR-NIVEDI, Bangalore</p>
+                        <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                            Worked as a Social Science Scientist under the project 'IndoZooRisk: Using One Health Approaches to Understand and Co-develop Interventions for Zoonotic Diseases Affecting Forest Communities in India'.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 text-slate-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                       <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <div class="flex flex-col sm:flex-row justify-between mb-1">
+                            <h3 class="font-bold text-gray-900 dark:text-white text-lg">Young Professional II</h3>
+                            <time class="font-caveat font-medium text-indigo-500 dark:text-indigo-400">May 2023 – Aug 2023</time>
+                        </div>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">AICRP on Women in Agriculture, UAS GKVK</p>
+                        <div class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                            <ul class="list-disc list-outside ml-4 space-y-1">
+                                <li>Developed a repository database to analyze the role of women in agriculture.</li>
+                                <li>Worked as a data entry specialist and analyst for gender equity promotion.</li>
+                                <li>Organized training programs for farmers on millets in Kothakote village and Nallagondayarahalli.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Job 4 -->
+                 <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 text-slate-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                       <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <div class="flex flex-col sm:flex-row justify-between mb-1">
+                            <h3 class="font-bold text-gray-900 dark:text-white text-lg">Technical Assistant</h3>
+                            <time class="font-caveat font-medium text-indigo-500 dark:text-indigo-400">Nov 2018 – Jun 2019</time>
+                        </div>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">Department of Agricultural Extension, UAS GKVK</p>
+                        <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                            Worked under projects 'Study on Assessment of Mobile ICT Services in Agriculture' and 'Commodity-Based Associations'. Engaged with over 220 farmers, assessed program effectiveness.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Research Experience Block -->
+            <div class="mt-16 bg-white dark:bg-slate-800 p-8 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                    <i class="fas fa-microscope text-primary mr-3"></i> Research Experience
+                </h2>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="font-bold text-lg text-gray-800 dark:text-gray-200">Ph.D. Research (Fieldwork & Data Collection)</h3>
+                        <p class="text-sm text-indigo-500 dark:text-indigo-400 mb-2">September 2019 – 03 April 2023</p>
+                        <p class="text-gray-600 dark:text-gray-300">Specialized in developing a scale to measure attitudes toward the PMFBY program, preparing questionnaires, collecting data, analyzing data using SPSS software, and interpreting results.</p>
+                    </div>
+                    <div class="border-t border-gray-100 dark:border-gray-700 pt-4">
+                        <h3 class="font-bold text-lg text-gray-800 dark:text-gray-200">M.Sc. Research (Thesis Work)</h3>
+                        <p class="text-sm text-indigo-500 dark:text-indigo-400 mb-2">August 2016 – 11 September 2018</p>
+                        <p class="text-gray-600 dark:text-gray-300">Conducted research on "Adoption and Economic Performance of Bi-voltine Silkworm Rearing Farmers in Chitradurga District".</p>
+                    </div>
+                    <div class="mt-4 p-4 bg-blue-50 dark:bg-slate-700/30 rounded-lg">
+                        <p class="font-semibold text-primary dark:text-blue-400">Total Professional Experience: 3 years 2 months (as of Nov 2025)</p>
+                        <p class="font-semibold text-primary dark:text-blue-400">Combined Research Experience: 5 years</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-gray-800 py-8 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 dark:text-gray-400">
+            <p>© 2025 Dr. Imrankhan Jiragal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
