@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Dr. Imrankhan Jiragal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb', // Blue 600
+                        secondary: '#475569', // Slate 600
+                        dark: '#0f172a', // Slate 900
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="images/iman.jpg">
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-dark dark:text-gray-200 transition-colors duration-300 flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-primary dark:text-blue-400">Dr. Imrankhan</a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 font-medium transition-colors">Home</a>
+                    <a href="about.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 font-medium transition-colors">About</a>
+                    <a href="experience.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 font-medium transition-colors">Experience</a>
+                    <a href="publications.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 font-medium transition-colors">Publications</a>
+                    <a href="contact.html" class="text-primary dark:text-blue-400 font-bold transition-colors">Contact</a>
+
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors focus:outline-none">
+                        <i id="theme-icon" class="fas fa-moon text-gray-700 dark:text-yellow-300 text-lg"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="p-2 rounded-md text-gray-700 dark:text-gray-200 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-800 border-t dark:border-gray-700">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Home</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">About</a>
+                <a href="experience.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Experience</a>
+                <a href="publications.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Publications</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-primary dark:text-blue-400 bg-blue-50 dark:bg-slate-700">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-8 border-l-4 border-primary pl-4">Get in Touch</h1>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <div class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Contact Information</h2>
+
+                        <div class="flex items-start mb-6">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 dark:bg-slate-700 text-primary dark:text-blue-400">
+                                    <i class="fas fa-map-marker-alt text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900 dark:text-white">Address</h3>
+                                <p class="mt-1 text-gray-600 dark:text-gray-300">
+                                    Judicial Layout, Yelahanka,<br>
+                                    Bangalore, India-560065
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start mb-6">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 dark:bg-slate-700 text-primary dark:text-blue-400">
+                                    <i class="fas fa-phone-alt text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900 dark:text-white">Phone</h3>
+                                <p class="mt-1 text-gray-600 dark:text-gray-300">
+                                    +91-8861007758<br>
+                                    +91-9480438091
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 dark:bg-slate-700 text-primary dark:text-blue-400">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900 dark:text-white">Email</h3>
+                                <p class="mt-1 text-gray-600 dark:text-gray-300">
+                                    <a href="mailto:imrankhanjiragal@gmail.com" class="hover:underline hover:text-primary transition-colors">imrankhanjiragal@gmail.com</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">References</h2>
+                         <ul class="space-y-6 text-gray-600 dark:text-gray-300">
+                             <li>
+                                 <strong>Dr. Ganesamoorthi, S.</strong><br>
+                                 Professor, Department of Agricultural Extension,<br>
+                                 University of Agricultural Sciences, GKVK, Bangalore.<br>
+                                 <span class="text-sm text-gray-500 dark:text-gray-400">Ph: 9731876687</span>
+                             </li>
+                             <li>
+                                 <strong>Dr. Narayanaswamy, C.</strong><br>
+                                 Professor, Department of Agricultural Extension,<br>
+                                 University of Agricultural Sciences, GKVK, Bangalore.<br>
+                                 <span class="text-sm text-gray-500 dark:text-gray-400">Ph: 9448308678</span>
+                             </li>
+                              <li>
+                                 <strong>Dr. Mahin Sharif</strong><br>
+                                 Assistant Professor, Department of Agricultural Economics,<br>
+                                 University of Agricultural Sciences, GKVK, Bangalore.<br>
+                                 <span class="text-sm text-gray-500 dark:text-gray-400">Ph: 9449318177</span>
+                             </li>
+                             <li>
+                                 <strong>Dr. Srinivasa Reddy, M.V.</strong><br>
+                                 Professor, Department of Agricultural Extension,<br>
+                                 University of Agricultural Sciences, GKVK, Bangalore.<br>
+                                 <span class="text-sm text-gray-500 dark:text-gray-400">Ph: 9731876687</span>
+                             </li>
+                             <li>
+                                 <strong>Dr. K. Geetha</strong><br>
+                                 Retired Professor, AICRP on Women in Agriculture,<br>
+                                 University of Agricultural Sciences, GKVK, Bangalore.<br>
+                                 <span class="text-sm text-gray-500 dark:text-gray-400">Ph: 9449523085</span>
+                             </li>
+                             <li>
+                                 <strong>Dr. Mohammad Mudassar Chanda</strong><br>
+                                 Senior Scientist, ICAR-National Institute of Veterinary Epidemiology and Disease Informatics,<br>
+                                 Ramagondanahalli, Yelahanka, Bangalore.<br>
+                                 <span class="text-sm text-gray-500 dark:text-gray-400">Ph: 9008755418</span>
+                             </li>
+                             <li>
+                                 <strong>Sri. Mohammad Paravej Banthanal</strong><br>
+                                 Director, Watershed Development Department of Karnataka<br>
+                                 <span class="text-sm text-gray-500 dark:text-gray-400">Ph: 9448972737</span>
+                             </li>
+                         </ul>
+                    </div>
+                </div>
+
+                <!-- Contact Form (Visual Only) -->
+                <div>
+                     <form class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Send a Message</h2>
+                        <div class="mb-4">
+                            <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-primary focus:border-primary dark:bg-slate-700 dark:text-white" placeholder="Your Name">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-primary focus:border-primary dark:bg-slate-700 dark:text-white" placeholder="your.email@example.com">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-primary focus:border-primary dark:bg-slate-700 dark:text-white" placeholder="How can I help you?"></textarea>
+                        </div>
+                        <button type="button" class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-gray-800 py-8 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 dark:text-gray-400">
+            <p>© 2025 Dr. Imrankhan Jiragal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

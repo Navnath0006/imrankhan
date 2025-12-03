@@ -1,194 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Imrankhan Jiragal - Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Dr. Imrankhan Jiragal | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        .section-title {
-            border-left: 4px solid #3b82f6;
-            padding-left: 1rem;
-            margin-bottom: 2rem;
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb', // Blue 600
+                        secondary: '#475569', // Slate 600
+                        dark: '#0f172a', // Slate 900
+                    }
+                }
+            }
         }
-        .skill-badge {
-            transition: all 0.3s ease;
-        }
-        .skill-badge:hover {
-            transform: translateY(-2px);
-        }
-    </style>
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="images/iman.jpg">
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 text-gray-800 dark:bg-dark dark:text-gray-200 transition-colors duration-300">
+
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
-        <div class="container">
-            <a class="navbar-brand text-blue-600 font-bold" href="#">Dr. Imrankhan Jiragal</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
-                </ul>
+    <nav class="fixed w-full z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-primary dark:text-blue-400">Dr. Imrankhan</a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 font-medium transition-colors">Home</a>
+                    <a href="about.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 font-medium transition-colors">About</a>
+                    <a href="experience.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 font-medium transition-colors">Experience</a>
+                    <a href="publications.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 font-medium transition-colors">Publications</a>
+                    <a href="contact.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 font-medium transition-colors">Contact</a>
+
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors focus:outline-none">
+                        <i id="theme-icon" class="fas fa-moon text-gray-700 dark:text-yellow-300 text-lg"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="p-2 rounded-md text-gray-700 dark:text-gray-200 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-800 border-t dark:border-gray-700">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Home</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">About</a>
+                <a href="experience.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Experience</a>
+                <a href="publications.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Publications</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Contact</a>
+                <button id="mobile-theme-toggle" class="w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">
+                   Toggle Theme
+                </button>
             </div>
         </div>
     </nav>
 
-    <!-- Personal Info Section -->
-    <section class="container py-5 mt-5">
-        <div class="row align-items-center">
-            <div class="col-md-8">
-                <h1 class="text-4xl font-bold mb-3">Dr. Imrankhan Jiragal</h1>
-                <p class="text-gray-600 mb-2">
-                    <i class="fas fa-map-marker-alt mr-2"></i>Bangalore, India
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center pt-16 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-slate-900 dark:to-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+                <h2 class="text-xl md:text-2xl font-semibold text-primary dark:text-blue-400 mb-2">Hello, I'm</h2>
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4">Dr. Imrankhan Jiragal</h1>
+                <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-6 font-light">
+                    M.Sc., Ph.D. in Agricultural Extension
                 </p>
-                <p class="text-gray-600 mb-2">
-                    <i class="fas fa-envelope mr-2"></i>imrankhanjiragal@gmail.com
+                <p class="text-gray-600 dark:text-gray-400 mb-8 max-w-lg mx-auto md:mx-0 leading-relaxed">
+                    Dedicated social science researcher with extensive experience in agriculture, development, GIS, and policy formulation. Passionate about conducting impactful studies that inform policy.
                 </p>
-                <div class="mt-4">
-                    <a href="#contact" class="btn btn-primary me-2">Contact</a>
-                    <a href="#" class="btn btn-outline-primary">Download CV</a>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="about.html" class="px-8 py-3 bg-primary hover:bg-blue-700 text-white font-medium rounded-lg shadow-lg transition-transform transform hover:-translate-y-1">
+                        More About Me
+                    </a>
+                    <a href="contact.html" class="px-8 py-3 bg-white dark:bg-slate-700 text-gray-800 dark:text-white border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-slate-600 font-medium rounded-lg shadow transition-transform transform hover:-translate-y-1">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center relative">
+                <div class="absolute inset-0 bg-blue-200 dark:bg-blue-900 rounded-full filter blur-3xl opacity-30 animate-pulse"></div>
+                <!-- Placeholder for Image if user has one, otherwise a stylized icon or graphic -->
+                <div class="relative w-64 h-64 md:w-80 md:h-80 bg-white dark:bg-slate-800 rounded-full flex items-center justify-center shadow-2xl border-4 border-white dark:border-slate-700 overflow-hidden">
+                    <img src="images/iman.jpg" alt="Dr. Imrankhan Jiragal" class="w-full h-full object-cover">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Summary Section -->
-    <section id="about" class="bg-white py-5">
-        <div class="container">
-            <h2 class="section-title text-2xl font-bold">Summary</h2>
-            <p class="text-gray-700 leading-relaxed">
-                Dedicated and accomplished social science researcher with extensive experience in qualitative and quantitative analysis...
-            </p>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="py-5">
-        <div class="container">
-            <h2 class="section-title text-2xl font-bold">Experience</h2>
-            <div class="accordion" id="experienceAccordion">
-                <!-- Experience items will be dynamically added here -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="bg-white py-5">
-        <div class="container">
-            <h2 class="section-title text-2xl font-bold">Skills</h2>
-            <div class="row" id="skillsContainer">
-                <!-- Skills will be dynamically added here -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Publications Section -->
-    <section id="publications" class="py-5">
-        <div class="container">
-            <h2 class="section-title text-2xl font-bold">Research Publications</h2>
-            <div class="list-group">
-                <!-- Publication items will be dynamically added here -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="fixed bottom-8 right-8 p-3 bg-blue-600 text-white rounded-full shadow-lg hidden">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <script>
-        // Dynamic content loading
-        const experiences = [
-            {
-                title: "Research Associate",
-                company: "ICAR-NIVEDI, Bangalore",
-                duration: "Current",
-                description: "Working on IndoZooRisk project using One Health Approaches..."
-            },
-            // Add other experiences
-        ];
-
-        const skills = ["QGIS", "IBM-SPSS", "NVIVO", "Power BI", "Epi-Info", "Dedoose"];
-        
-        const publications = [
-            "Adoption Level of Bi-voltine Silkworm...",
-            // Add other publications
-        ];
-
-        // Populate experiences
-        const accordion = document.getElementById('experienceAccordion');
-        experiences.forEach((exp, index) => {
-            accordion.innerHTML += `
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button ${index === 0 ? '' : 'collapsed'}" type="button" data-bs-toggle="collapse" data-bs-target="#exp${index}">
-                            ${exp.title} - ${exp.company}
-                        </button>
-                    </h2>
-                    <div id="exp${index}" class="accordion-collapse collapse ${index === 0 ? 'show' : ''}" data-bs-parent="#experienceAccordion">
-                        <div class="accordion-body">
-                            <p>${exp.description}</p>
-                            <small class="text-muted">${exp.duration}</small>
-                        </div>
-                    </div>
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-gray-800 py-8 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-500 dark:text-gray-400">© 2025 Dr. Imrankhan Jiragal. All rights reserved.</p>
                 </div>
-            `;
-        });
-
-        // Populate skills
-        const skillsContainer = document.getElementById('skillsContainer');
-        skills.forEach(skill => {
-            skillsContainer.innerHTML += `
-                <div class="col-md-4 mb-3">
-                    <div class="skill-badge bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-center">
-                        <i class="fas fa-check-circle mr-2"></i>${skill}
-                    </div>
+                <div class="flex space-x-6">
+                    <a href="mailto:imrankhanjiragal@gmail.com" class="text-gray-400 hover:text-primary dark:hover:text-blue-400 transition-colors">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-primary dark:hover:text-blue-400 transition-colors">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-primary dark:hover:text-blue-400 transition-colors">
+                        <i class="fab fa-researchgate text-xl"></i>
+                    </a>
                 </div>
-            `;
-        });
+            </div>
+        </div>
+    </footer>
 
-        // Populate publications
-        const pubList = document.querySelector('.list-group');
-        publications.forEach(pub => {
-            pubList.innerHTML += `
-                <a href="#" class="list-group-item list-group-item-action">
-                    <i class="fas fa-file-alt mr-2 text-blue-600"></i>${pub}
-                </a>
-            `;
-        });
-
-        // Back to top button
-        window.addEventListener('scroll', () => {
-            const backToTop = document.getElementById('backToTop');
-            if (window.scrollY > 300) {
-                backToTop.classList.remove('hidden');
-            } else {
-                backToTop.classList.add('hidden');
-            }
-        });
-
-        document.getElementById('backToTop').addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>

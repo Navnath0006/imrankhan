@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications | Dr. Imrankhan Jiragal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb', // Blue 600
+                        secondary: '#475569', // Slate 600
+                        dark: '#0f172a', // Slate 900
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="images/iman.jpg">
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-dark dark:text-gray-200 transition-colors duration-300 flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-primary dark:text-blue-400">Dr. Imrankhan</a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 font-medium transition-colors">Home</a>
+                    <a href="about.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 font-medium transition-colors">About</a>
+                    <a href="experience.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 font-medium transition-colors">Experience</a>
+                    <a href="publications.html" class="text-primary dark:text-blue-400 font-bold transition-colors">Publications</a>
+                    <a href="contact.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 font-medium transition-colors">Contact</a>
+
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors focus:outline-none">
+                        <i id="theme-icon" class="fas fa-moon text-gray-700 dark:text-yellow-300 text-lg"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="p-2 rounded-md text-gray-700 dark:text-gray-200 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-800 border-t dark:border-gray-700">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Home</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">About</a>
+                <a href="experience.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Experience</a>
+                <a href="publications.html" class="block px-3 py-2 rounded-md text-base font-medium text-primary dark:text-blue-400 bg-blue-50 dark:bg-slate-700">Publications</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-8 border-l-4 border-primary pl-4">Publications & Research</h1>
+
+            <!-- Thesis -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">M.Sc. and Ph.D. Thesis</h2>
+                <div class="grid gap-6">
+                    <div class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-sm border-l-4 border-indigo-500">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Ph.D. Thesis</h3>
+                        <p class="text-gray-600 dark:text-gray-300 italic">"Impact of Pradhan Mantri Fasal Bima Yojana on Livelihood Security of Farmers in Kolar District of Karnataka"</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">September 2019 to 3 April 2023</p>
+                    </div>
+                    <div class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-sm border-l-4 border-indigo-500">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">M.Sc. Thesis</h3>
+                        <p class="text-gray-600 dark:text-gray-300 italic">"Adoption and Economic Performance of Bi-voltine Silkworm Rearing Farmers in Chitradurga District"</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">August 2016 to 11 September 2018</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Journal Publications -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Journal Publications</h2>
+                <div class="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-6">
+                    <ul class="space-y-6 list-decimal list-outside ml-4 text-gray-700 dark:text-gray-300">
+                        <li class="pl-2">
+                            <span class="font-semibold">Imrankhan Jiragal</span>, M.V. Srinivasa Reddy, Mahinsharif, Mohankumar and Naik, R.G., 2019. Adoption Level of Bi-voltine Silkworm Rearing Practices among Farmers of Chitradurga District. <span class="italic">Int.J.Curr.Microbiol.App.Sci.</span> 8(2): 2481-2488.
+                        </li>
+                        <li class="pl-2">
+                            <span class="font-semibold">Jiragal, Imrankhan</span>, Golya Naik, R., Srinivasa Reddy, M.V., Sharif, Mahin, Mohankumar, T.L. (2019). Economic Performance of Bi-Voltine Silkworm Rearing Farmers in Chitradurga District. <span class="italic">International Journal of Agriculture Sciences</span>, 11 (3), 7841-7843.
+                        </li>
+                        <li class="pl-2">
+                            <span class="font-semibold">Imrankhan Jiragal</span>, R. Golya Naik, M.V. Srinivasa Reddy, Mahin Sharif and T.L. Mohan Kumar. 2019. Constraints of bi-voltine silkworm rearing farmers of Chitradurga District. <span class="italic">Green Farming</span> Vol. 10 (5) : 652-654.
+                        </li>
+                        <li class="pl-2">
+                            <span class="font-semibold">Imrankhan Jiragal</span>, R. Golya Naik, M.V. Srinivasa Reddy, Mahinsharif and Mohankumar, T.L., 2019. Profile of Bi-voltine Silkworm Rearing Farmers of Chitradurga District, India. <span class="italic">Int. J. Curr. Microbiol. App. Sci.</span> 8(09).
+                        </li>
+                        <li class="pl-2">
+                            <span class="font-semibold">Jiragal, Imrankhan</span>, Ganesamoorthi, S., 2022. Development of a Scale to Measure Attitude of Farmers towards Pradhan Mantri Fasal Bima Yojana (PMFBY) Programme. <span class="italic">Mysore Journal of Agricultural Science.</span>, 56(4):192-200.
+                        </li>
+                        <li class="pl-2">
+                            <span class="font-semibold">Jiragal, I.</span>, Ganesamoorthi, S., Mohankumar, T. L. & Narayanswamy, C., (2023). Constraints and Suggestions of Beneficiary and Non-beneficiary of Farmers towards Pradhan Mantri Fasal Bima Yojana in Kolar District of Karnataka. <span class="italic">Asian Journal of Agricultural Extension, Economics & Sociology</span>, 41(4), 55–61.
+                        </li>
+                        <li class="pl-2">
+                            Yankanchi, Geetha, M., Geetha, K, <span class="font-semibold">Imrankhan Jiragal</span>, And Latha Rani, R., 2024. “Women’s Awareness Towards Their Entrepreneurial Behaviour in Tumkuru and Chikaballapura District of Karnataka, India”. <span class="italic">Journal of Scientific Research and Reports</span> 30 (4):162-69.
+                        </li>
+                        <li class="pl-2">
+                            Yankanchi, G. M., Geetha, K., Ravindra, U., <span class="font-semibold">Jiragal, I.</span>, & Rani, R. L., (2023). Perception Level of Farm Women towards Entrepreneurial Development in Tumkuru and Chikkaballapura Districts of Karnataka, India. <span class="italic">Asian Journal of Agricultural Extension, Economics & Sociology</span>, 41(11), 160–167.
+                        </li>
+                        <li class="pl-2">
+                            Srinivasa Reddy, M.V., <span class="font-semibold">Jiragal, Imrankhan</span>, Papireddy, M., Venkatramana, P. (2019). Adoption Level of Improved Practices Among Sericulture Farmers of Kolar and Chikkaballapur districts in Karnataka. <span class="italic">International Journal of Agriculture Sciences</span>, 11 (16), 8929-8931.
+                        </li>
+                        <li class="pl-2">
+                            Srinivasa Reddy, M.V., <span class="font-semibold">Jiragal, Imrankhan</span>, Naik, Ramakrisna, R., Golya Naik (2019). Knowledge Level of Improved Practices Among Sericulture Farmers in Kolar and Chikkaballapur Districts of Karnataka. <span class="italic">International Journal of Agriculture Sciences</span>, 11 (16), 8926-8928.
+                        </li>
+                        <li class="pl-2">
+                            Srinivasa Reddy, M.V., <span class="font-semibold">Jiragal, Imrankhan</span>, Sivappa (2019) Participation Level of Farm Women in Sericulture. <span class="italic">International Journal of Agriculture Sciences</span>, Volume 11, Issue 16, pp.- 8940-8942.
+                        </li>
+                        <li class="pl-2">
+                            <span class="font-semibold">Jiragal, I.</span>, Ganesamoorthi, S., Khatoon, M., Mohankumar, T.L., & Narayanaswamy, C., 2025. Food, Economic, and Livelihood Security of Farmers under PMFBY in Kolar, Karnataka. <span class="italic">Indian Journal of Extension Education</span>, 61(2), 40–44.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+             <!-- Book Chapters -->
+             <section class="mb-12">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Book Chapters</h2>
+                <div class="grid gap-6 md:grid-cols-2">
+                    <div class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700">
+                        <p class="text-gray-700 dark:text-gray-300">
+                            <span class="font-semibold">Jiragal, I.</span>, Bepari, A., Sharif, M., 2023. An Overview of Agriculture Infrastructure Fund. <span class="italic">Strategies for Sustainable Agriculture</span>.
+                        </p>
+                    </div>
+                    <div class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700">
+                        <p class="text-gray-700 dark:text-gray-300">
+                            Bepari, A., <span class="font-semibold">Jiragal, I.</span>, Khalandar, S., 2023. Essential Oils – Beyond Aroma. <span class="italic">Strategies for Sustainable Agriculture</span>.
+                        </p>
+                    </div>
+                    <div class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700">
+                        <p class="text-gray-700 dark:text-gray-300">
+                            Rani, L., <span class="font-semibold">Jiragal, I.</span>, Kumar, A., Kulkarni, U. N., Amaranth Millet: A Resilient Super Food Bridging Ancient Wisdom and Modern Lifestyle. <span class="italic">Nutraceutical Potential of Millets</span>.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Research Abstracts -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Research Abstracts</h2>
+                <div class="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-6">
+                     <ul class="space-y-4 list-disc list-outside ml-4 text-gray-700 dark:text-gray-300">
+                        <li>
+                            <span class="font-semibold">Jiragal, I.</span> et al., 2023. Livelihood security assessment of beneficiary and nonbeneficiary farmers during COVID-19 towards Pradhan Mantri Fasal Bima Yojana. 4th International Conference on Innovations to Transform Agriculture.
+                        </li>
+                        <li>
+                             <span class="font-semibold">Jiragal, I.</span> et al., 2023. Assessment of Livelihood Security of Beneficiary and Non-Beneficiary Farmers of PMFBY in Kolar. ISEE national seminar on Evolving extension Science.
+                        </li>
+                        <li>
+                            Imrankhan, and Srinivasa Reddy, M. V., 2022. Economic Performance of Bi-voltine Silkworm Rearing Farmers in Chitradurga District. National conference on Sericulture based MultiDisciplinary Approaches.
+                        </li>
+                     </ul>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-gray-800 py-8 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 dark:text-gray-400">
+            <p>© 2025 Dr. Imrankhan Jiragal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
